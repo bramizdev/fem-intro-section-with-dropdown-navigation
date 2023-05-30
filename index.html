@@ -27,20 +27,185 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./style.css" />
     <!-- Script -->
-    <script src="./script.js"></script>
+    <script defer src="./script.js"></script>
     <!-- Title -->
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
   </head>
   <body>
-    Features Company Careers About Login Register Make remote work Get your team
-    in sync, no matter your location. Streamline processes, create team rituals,
-    and watch productivity soar. Learn more
-
-    <div class="attribution">
+    <div class="backdrop"></div>
+    <div class="wrapper">
+      <header class="header">
+        <a href="#" aria-label="Homepage.">
+          <img
+            class="header__logo"
+            src="./images/logo.svg"
+            alt=""
+            aria-hidden="true"
+          />
+        </a>
+        <div class="header__nav-container">
+          <div class="btn__container">
+            <button
+              class="close__mobile"
+              aria-label="Close menu."
+              aria-expanded="false"
+            >
+              <img
+                src="./images/icon-close-menu.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-list-item">
+                <button class="header__nav-list-btn" aria-expanded="false">
+                  Features
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </button>
+                <ul class="dropdown features__dropdown">
+                  <li>
+                    <a
+                      class="features__dropdown nav__link"
+                      data-icon="todo"
+                      href="#"
+                    >
+                      Todo List
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="features__dropdown nav__link"
+                      data-icon="calendar"
+                      href="#"
+                    >
+                      Calendar
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="features__dropdown nav__link"
+                      data-icon="reminders"
+                      href="#"
+                    >
+                      Reminders
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="features__dropdown nav__link"
+                      data-icon="planning"
+                      href="#"
+                    >
+                      Planning
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__nav-list-item">
+                <button class="header__nav-list-btn" aria-expanded="false">
+                  Company
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </button>
+                <ul class="dropdown company__dropdown">
+                  <li><a class="nav__link" href="#">History</a></li>
+                  <li><a class="nav__link" href="#">Our Team</a></li>
+                  <li><a class="nav__link" href="#">Blog</a></li>
+                </ul>
+              </li>
+              <li class="header__nav-list-item">
+                <a href="#" class="header__nav-list-link nav__link">Careers</a>
+              </li>
+              <li class="header__nav-list-item">
+                <a href="#" class="header__nav-list-link nav__link">About</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="user__group">
+            <a href="#" class="user__group-btn login__btn nav__link">Login</a>
+            <a href="#" class="user__group-btn register__btn nav__link"
+              >Register</a
+            >
+          </div>
+        </div>
+        <button class="header__menu" aria-label="Menu">
+          <img src="./images/icon-menu.svg" alt="" aria-hidden="true" />
+        </button>
+      </header>
+      <main class="main">
+        <div class="main__content">
+          <h1 class="main__heading">Make remote work</h1>
+          <p class="main__text">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <a href="#" class="main__primary-btn">Learn more</a>
+          <div class="main__clients">
+            <h2 class="visually-hidden">Our clients</h2>
+            <ul class="clients">
+              <li class="clients__client">
+                <a href="#" aria-label="Databiz - Visit website">
+                  <img
+                    src="./images/client-databiz.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </li>
+              <li class="clients__client">
+                <a href="#" aria-label="Audiophile - Visit website">
+                  <img
+                    src="./images/client-audiophile.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </li>
+              <li class="clients__client">
+                <a href="#" aria-label="Meet - Visit website">
+                  <img
+                    src="./images/client-meet.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </li>
+              <li class="clients__client">
+                <a href="#" aria-label="Maker - Visit website">
+                  <img
+                    src="./images/client-maker.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <picture class="main__illustration">
+          <source
+            srcset="./images/image-hero-desktop.png"
+            media="(min-width: 828px)"
+          />
+          <img src="./images/image-hero-mobile.png" alt="" aria-hidden="true" />
+        </picture>
+      </main>
+    </div>
+    <footer>
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+      >. Coded by
+      <a href="https://github.com/bramizdev" target="_blank">@bramizdev</a>.
+    </footer>
   </body>
 </html>
